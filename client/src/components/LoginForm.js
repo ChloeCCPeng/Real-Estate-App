@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { button, error, input, filed, label } from "../styles/button";
+// import { button, error, input, div, label } from "../styles/button";
 import { createBrowserHistory } from 'history';
 import { Link, useHistory, Redirect, Route } from "react-router-dom";
 
@@ -27,9 +27,9 @@ fetch("/login", {
         onLogin(user);
     console.log("logged in");
     console.log(user.seller);
-    // history.push("/")
-    // if (user.seller) return history.push("/sellerpage")
-    // else return history.push("/")
+    history.push("/")
+    if (user.seller) return history.push("/sellerpage")
+    else return history.push("/")
     })
     } else {
     r.json().then((err) => setErrors(err.errors));
@@ -39,7 +39,7 @@ fetch("/login", {
 
 return (
 <form onSubmit={handleSubmit} >
-    <field>
+    <div>
     <label htmlFor="username">Username</label>
     <input
         type="text"
@@ -48,8 +48,8 @@ return (
         value={username}
         onChange={(e) => setUsername(e.target.value)}
     />
-    </field>
-    <filed>
+    </div>
+    <div>
     <label For="password">Password</label>
     <input
         type="password"
@@ -58,17 +58,17 @@ return (
         value={password}
         onChange={(e) => setPassword(e.target.value)}
     />
-    </filed>
-    <filed>
+    </div>
+    <div>
     <button variant="fill" color="primary" type="submit">
         {isLoading ? "Loading..." : "Login"}
     </button>
-    </filed>
-    <filed>
-    {errors.map((err) => (
+    </div>
+    <div>
+        {errors.map((err) => (
         <error key={err}>{err}</error>
     ))}
-    </filed>
+    </div>
 </form>
 );
 }
