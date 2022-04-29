@@ -8,7 +8,7 @@ puts " Seeding data...."
 
 puts " 👥 Creating users "
 20.times do
-    User.create(firstName: Faker::Name.first_name, lastName: Faker::Name.last_name, email: Faker::Internet.email, password: "password", phoneNumber: Faker::PhoneNumber.cell_phone)
+    User.create(firstName: Faker::Name.first_name, lastName: Faker::Name.last_name ,email: Faker::Internet.email, password: "password", password_confirmation: "password",phoneNumber: Faker::PhoneNumber.cell_phone)
 end
 
 puts " 👀 Creating watchlist "
