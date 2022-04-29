@@ -1,0 +1,9 @@
+  [1m[35m (739.0ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_development" ENCODING = 'unicode'[0m
+  [1m[35m (112.8ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2022-04-28 23:15:31 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/chloepeng/.rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/chloepeng/.rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.0ms | Allocations: 402)
+Completed 200 OK in 28ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 3431)
+
+
