@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Switch, Route, useHistory } from "react-router-dom";
+// import NavBar from "./NavBar";
+import Login from "./components/Login";
+import Home from "./components/Home";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+    
+    const [user, setUser] = useState(null);
+    // const [errors, setErrors] = useState([])
+  
+    // const history = useHistory()
+  
+  
+    // useEffect(() => {
+    //   // auto-login
+    //   fetch("/me").then((r) => {
+    //     if (r.ok) {
+    //       r.json().then((user) => setUser(user));
+    //     };
+    //   });
+    // }, []);
+  
+    // if (!user) return <Login onLogin={setUser} />;
+  
+    return (
+      <BrowserRouter>
+        {/* <NavBar user={user} setUser={setUser}/> */}
+        <Switch>
+          <Route exact path="/">
+            <Home /> 
+          </Route>
+          <Route exact path="/login">
+            <Login onLogin={setUser} />
+          </Route>
+          {/* <Route path="/success">
+            <Success />
+          </Route>
+          <Route path="/canceled">
+            <Canceled />
+          </Route>
+          <Route path="/checkout">
+            <Checkout />
+          </Route> */}
+        </Switch>
+      </BrowserRouter>
+    );
+  };
+  export default App;

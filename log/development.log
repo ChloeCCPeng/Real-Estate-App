@@ -577,3 +577,55 @@ Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-04-29 00:29:07 -0
   
 ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
   
+Started GET "/watchlists/1" for ::1 at 2022-04-29 11:12:16 -0400
+Processing by WatchlistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWatchlist Load (12.3ms)[0m  [1m[34mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/watchlists_controller.rb:39:in `find_watchlist'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.5ms)
+Completed 404 Not Found in 667ms (Views: 5.6ms | ActiveRecord: 276.2ms | Allocations: 5030)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-04-29 11:12:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for ::1 at 2022-04-29 11:12:22 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/chloepeng/.rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/chloepeng/.rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 18.4ms | Allocations: 177)
+Completed 200 OK in 27ms (Views: 20.5ms | ActiveRecord: 0.0ms | Allocations: 718)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-04-29 13:58:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-04-29 14:02:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-04-29 17:44:45 -0400
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-04-29 17:45:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-04-29 17:59:34 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"chloe", "password"=>"[FILTERED]", "session"=>{"username"=>"chloe", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 17ms (Allocations: 4073)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
