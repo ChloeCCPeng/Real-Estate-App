@@ -7,3 +7,354 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 28ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 3431)
 
 
+  [1m[35m (94.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220429032014)
+  [1m[35m (16.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220429032014)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (25.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "password" character varying, "firstName" character varying, "lastName" character varying, "phoneNumber" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (7.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220429032014"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateHouses (20220429032025)
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE TABLE "houses" ("id" bigserial primary key, "address" character varying, "lotSizeAcres" integer, "lotSizeSquareFeet" integer, "associationFee" integer, "listPrice" integer, "bathroomsTotal" integer, "bedroomsTotal" integer, "mainLevelBathrooms" integer, "fireplacesTotal" integer, "fireplaceFeature" character varying, "garageSpaces" integer, "bathroomHalf" integer, "storiesTotal" integer, "publicRemarks" text, "livingArea" integer, "yearBuilt" integer, "yearBuiltDetails" text, "standardStatus" character varying, "propertyType" character varying, "propertySubType" character varying, "listingContractDate" date, "previousListPrice" integer, "originalListPrice" integer, "contingency" character varying, "numberOfUnitsTotal" integer, "listingTerms" character varying, "daysOnMarket" integer, "appliances" character varying, "roomsTotal" integer, "exteriorFeatures" character varying, "flooring" character varying, "foundationDetails" character varying, "frontageType" character varying, "gas" character varying, "accessibilityFeatures" character varying, "heating" character varying, "occupantType" character varying, "roadSurfaceType" character varying, "roof" character varying, "constructionMaterials" character varying, "sewer" character varying, "carportSpaces" integer, "openParkingYN" boolean, "laundryFeatures" character varying, "privateRemarks" text, "taxAssessedValue" integer, "taxAnnualAount" integer, "taxYear" character varying, "subdivisionName" character varying, "buyerFinancing" character varying, "homeWarrantyYN" boolean, "architecturalStyle" character varying, "comunityFeatures" character varying, "patioAndPorchFeatures" character varying, "otherStructures" character varying, "attachedGarage" boolean, "carportYN" boolean, "contigentDate" date, "associationYN" boolean, "associationName" character varying, "associationFeeFrequency" character varying, "associationFeeIncludes" text, "photo" character varying, "showingContactPhone" character varying, "showingContactName" character varying, "exclusions" text, "inclusions" text, "elementarySchool" character varying, "elementarySchoolDistrict" character varying, "middleOrJuniorSchool" character varying, "middleOrJuniorSchoolDistrict" character varying, "highSchool" character varying, "highSchoolDistrict" character varying, "garageYN" boolean, "levels" character varying, "builderName" character varying, "builderModel" character varying, "interiorFeatures" text, "greenEnergyEfficient" text, "walkScore" integer, "user_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220429032025"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateWatchlists (20220429032035)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "watchlists" ("id" bigserial primary key, "address" character varying, "user_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220429032035"]]
+  [1m[36mTRANSACTION (17.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMessages (20220429032044)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "messages" ("id" bigserial primary key, "conversation" text, "user_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220429032044"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOffers (20220429032051)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "offers" ("id" bigserial primary key, "amount" integer, "user_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220429032051"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSells (20220429032353)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (20.9ms)[0m  [1m[35mCREATE TABLE "sells" ("id" bigserial primary key, "seller_id" integer, "browser_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220429032353"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (5.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-04-29 03:28:32.216481"], ["updated_at", "2022-04-29 03:28:32.216481"]]
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mHouse Load (14.1ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  [1m[36mWatchlist Load (0.5ms)[0m  [1m[34mSELECT "watchlists".* FROM "watchlists"[0m
+  [1m[36mOffer Load (0.3ms)[0m  [1m[34mSELECT "offers".* FROM "offers"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mHouse Load (1.2ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  [1m[36mWatchlist Load (0.8ms)[0m  [1m[34mSELECT "watchlists".* FROM "watchlists"[0m
+  [1m[36mOffer Load (0.7ms)[0m  [1m[34mSELECT "offers".* FROM "offers"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "wilbur_torp@mayert.org"], ["password", "password"], ["firstName", "Tracey"], ["lastName", "Buckridge"], ["phoneNumber", "633-884-0247"], ["created_at", "2022-04-29 03:30:31.751814"], ["updated_at", "2022-04-29 03:30:31.751814"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "byron@nader.org"], ["password", "password"], ["firstName", "Maryjo"], ["lastName", "Hudson"], ["phoneNumber", "949-453-0142"], ["created_at", "2022-04-29 03:30:31.757365"], ["updated_at", "2022-04-29 03:30:31.757365"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (14.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "georgie_lind@mccullough.com"], ["password", "password"], ["firstName", "Meda"], ["lastName", "Sauer"], ["phoneNumber", "1-340-872-4170"], ["created_at", "2022-04-29 03:30:31.762021"], ["updated_at", "2022-04-29 03:30:31.762021"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "miriam@pfeffer.org"], ["password", "password"], ["firstName", "Brady"], ["lastName", "Kunze"], ["phoneNumber", "326.743.7498"], ["created_at", "2022-04-29 03:30:31.780540"], ["updated_at", "2022-04-29 03:30:31.780540"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "sheba@skiles-schultz.info"], ["password", "password"], ["firstName", "Jerlene"], ["lastName", "King"], ["phoneNumber", "421-864-5997"], ["created_at", "2022-04-29 03:30:31.784368"], ["updated_at", "2022-04-29 03:30:31.784368"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "darell@orn-jacobi.com"], ["password", "password"], ["firstName", "Vertie"], ["lastName", "Predovic"], ["phoneNumber", "1-660-897-4006"], ["created_at", "2022-04-29 03:30:31.787800"], ["updated_at", "2022-04-29 03:30:31.787800"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "brooks.rempel@kemmer.name"], ["password", "password"], ["firstName", "Laurel"], ["lastName", "Hoppe"], ["phoneNumber", "169.909.6461"], ["created_at", "2022-04-29 03:30:31.791791"], ["updated_at", "2022-04-29 03:30:31.791791"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "vinnie@wilkinson.io"], ["password", "password"], ["firstName", "Pedro"], ["lastName", "Fahey"], ["phoneNumber", "(778) 643-2807"], ["created_at", "2022-04-29 03:30:31.795172"], ["updated_at", "2022-04-29 03:30:31.795172"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "jeffery_schowalter@harber.co"], ["password", "password"], ["firstName", "Drew"], ["lastName", "Tremblay"], ["phoneNumber", "747.925.2590"], ["created_at", "2022-04-29 03:30:31.798720"], ["updated_at", "2022-04-29 03:30:31.798720"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "maryland@stoltenberg.info"], ["password", "password"], ["firstName", "Jona"], ["lastName", "Wehner"], ["phoneNumber", "(317) 390-4274"], ["created_at", "2022-04-29 03:30:31.802720"], ["updated_at", "2022-04-29 03:30:31.802720"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "tegan@heathcote.io"], ["password", "password"], ["firstName", "Neville"], ["lastName", "Grady"], ["phoneNumber", "1-720-554-2378"], ["created_at", "2022-04-29 03:30:31.806918"], ["updated_at", "2022-04-29 03:30:31.806918"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "abel.kunde@medhurst.co"], ["password", "password"], ["firstName", "Cleo"], ["lastName", "Bins"], ["phoneNumber", "(696) 479-8733"], ["created_at", "2022-04-29 03:30:31.812348"], ["updated_at", "2022-04-29 03:30:31.812348"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "carmine@tromp.info"], ["password", "password"], ["firstName", "Fe"], ["lastName", "Smith"], ["phoneNumber", "250.130.9944"], ["created_at", "2022-04-29 03:30:31.830386"], ["updated_at", "2022-04-29 03:30:31.830386"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "amiee@will.net"], ["password", "password"], ["firstName", "Brianna"], ["lastName", "Lakin"], ["phoneNumber", "910-164-0201"], ["created_at", "2022-04-29 03:30:31.833946"], ["updated_at", "2022-04-29 03:30:31.833946"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "benny@quitzon-wyman.io"], ["password", "password"], ["firstName", "Melvin"], ["lastName", "Bashirian"], ["phoneNumber", "1-998-450-6995"], ["created_at", "2022-04-29 03:30:31.837210"], ["updated_at", "2022-04-29 03:30:31.837210"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "rory@lubowitz-witting.org"], ["password", "password"], ["firstName", "Herschel"], ["lastName", "Weimann"], ["phoneNumber", "(246) 747-5957"], ["created_at", "2022-04-29 03:30:31.840477"], ["updated_at", "2022-04-29 03:30:31.840477"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "winford_von@harris-ernser.org"], ["password", "password"], ["firstName", "Loyd"], ["lastName", "Stark"], ["phoneNumber", "348.339.2071"], ["created_at", "2022-04-29 03:30:31.844258"], ["updated_at", "2022-04-29 03:30:31.844258"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "evette@schamberger-runolfsson.biz"], ["password", "password"], ["firstName", "Joaquin"], ["lastName", "Herzog"], ["phoneNumber", "775.554.9378"], ["created_at", "2022-04-29 03:30:31.847395"], ["updated_at", "2022-04-29 03:30:31.847395"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "jarvis.glover@tillman-morissette.io"], ["password", "password"], ["firstName", "Billy"], ["lastName", "Muller"], ["phoneNumber", "184.703.4087"], ["created_at", "2022-04-29 03:30:31.850834"], ["updated_at", "2022-04-29 03:30:31.850834"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "edwardo_erdman@daniel.biz"], ["password", "password"], ["firstName", "Eric"], ["lastName", "Shanahan"], ["phoneNumber", "1-901-021-0946"], ["created_at", "2022-04-29 03:30:31.859417"], ["updated_at", "2022-04-29 03:30:31.859417"]]
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (15.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (16.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (16.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mMessage Create (0.9ms)[0m  [1m[32mINSERT INTO "messages" ("conversation", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["conversation", "hi, is the house still available?"], ["user_id", 11], ["created_at", "2022-04-29 03:30:32.092820"], ["updated_at", "2022-04-29 03:30:32.092820"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mMessage Create (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("conversation", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["conversation", "hi, is the house still available?"], ["user_id", 17], ["created_at", "2022-04-29 03:30:32.101782"], ["updated_at", "2022-04-29 03:30:32.101782"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Create (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("conversation", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["conversation", "hi, is the house still available?"], ["user_id", 1], ["created_at", "2022-04-29 03:30:32.106998"], ["updated_at", "2022-04-29 03:30:32.106998"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (16.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMessage Create (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("conversation", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["conversation", "hi, is the house still available?"], ["user_id", 4], ["created_at", "2022-04-29 03:30:32.129434"], ["updated_at", "2022-04-29 03:30:32.129434"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mMessage Create (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("conversation", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["conversation", "hi, is the house still available?"], ["user_id", 13], ["created_at", "2022-04-29 03:30:32.134172"], ["updated_at", "2022-04-29 03:30:32.134172"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mMessage Create (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("conversation", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["conversation", "hi, is the house still available?"], ["user_id", 13], ["created_at", "2022-04-29 03:30:32.138216"], ["updated_at", "2022-04-29 03:30:32.138216"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mMessage Create (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("conversation", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["conversation", "hi, is the house still available?"], ["user_id", 15], ["created_at", "2022-04-29 03:30:32.143154"], ["updated_at", "2022-04-29 03:30:32.143154"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mMessage Create (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("conversation", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["conversation", "hi, is the house still available?"], ["user_id", 7], ["created_at", "2022-04-29 03:30:32.148059"], ["updated_at", "2022-04-29 03:30:32.148059"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mMessage Create (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("conversation", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["conversation", "hi, is the house still available?"], ["user_id", 13], ["created_at", "2022-04-29 03:30:32.153057"], ["updated_at", "2022-04-29 03:30:32.153057"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMessage Create (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("conversation", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["conversation", "hi, is the house still available?"], ["user_id", 2], ["created_at", "2022-04-29 03:30:32.157342"], ["updated_at", "2022-04-29 03:30:32.157342"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.8ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "814 Leffler Avenue, Rodericktown, IN 10224"], ["lotSizeAcres", 10], ["lotSizeSquareFeet", 4438], ["listPrice", 4359742], ["bathroomsTotal", 1], ["bedroomsTotal", 15], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.226159"], ["updated_at", "2022-04-29 03:30:32.226159"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.3ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "4623 Milissa Loop, East Cathybury, KS 99138-5955"], ["lotSizeAcres", 33], ["lotSizeSquareFeet", 2712], ["listPrice", 2619504], ["bathroomsTotal", 4], ["bedroomsTotal", 9], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.233949"], ["updated_at", "2022-04-29 03:30:32.233949"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.2ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "37905 Madalene Spurs, Muellermouth, TX 77604-0763"], ["lotSizeAcres", 32], ["lotSizeSquareFeet", 3884], ["listPrice", 3164916], ["bathroomsTotal", 2], ["bedroomsTotal", 10], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.237921"], ["updated_at", "2022-04-29 03:30:32.237921"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.3ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "Suite 699 3735 Ebert Street, Jameestad, CO 78497"], ["lotSizeAcres", 12], ["lotSizeSquareFeet", 3537], ["listPrice", 2996575], ["bathroomsTotal", 6], ["bedroomsTotal", 4], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.241976"], ["updated_at", "2022-04-29 03:30:32.241976"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.4ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "3760 Micheal Ridge, Labadiehaven, MI 59229-9867"], ["lotSizeAcres", 20], ["lotSizeSquareFeet", 2083], ["listPrice", 3927674], ["bathroomsTotal", 3], ["bedroomsTotal", 3], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.246172"], ["updated_at", "2022-04-29 03:30:32.246172"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.4ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "53381 Rosetta Ranch, West Darron, MN 05260-1031"], ["lotSizeAcres", 3], ["lotSizeSquareFeet", 4498], ["listPrice", 3866391], ["bathroomsTotal", 1], ["bedroomsTotal", 10], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.250034"], ["updated_at", "2022-04-29 03:30:32.250034"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.3ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "Apt. 571 378 Henrietta View, South Darcybury, MD 41427"], ["lotSizeAcres", 22], ["lotSizeSquareFeet", 1961], ["listPrice", 2826722], ["bathroomsTotal", 10], ["bedroomsTotal", 15], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.253960"], ["updated_at", "2022-04-29 03:30:32.253960"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.4ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "Apt. 712 211 Bauch Ferry, Manieborough, IL 76230"], ["lotSizeAcres", 1], ["lotSizeSquareFeet", 3356], ["listPrice", 2502098], ["bathroomsTotal", 2], ["bedroomsTotal", 5], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.257675"], ["updated_at", "2022-04-29 03:30:32.257675"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (14.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.3ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "Apt. 671 63196 Borer Squares, Port Delanaport, SD 12706-3100"], ["lotSizeAcres", 23], ["lotSizeSquareFeet", 4185], ["listPrice", 2317521], ["bathroomsTotal", 10], ["bedroomsTotal", 2], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.262030"], ["updated_at", "2022-04-29 03:30:32.262030"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.4ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "Apt. 936 13875 Roy Flat, Hauckshire, WY 11331-4583"], ["lotSizeAcres", 26], ["lotSizeSquareFeet", 4467], ["listPrice", 2436231], ["bathroomsTotal", 4], ["bedroomsTotal", 8], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.284838"], ["updated_at", "2022-04-29 03:30:32.284838"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.5ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "3212 Kshlerin Via, Beierberg, PA 51171"], ["lotSizeAcres", 33], ["lotSizeSquareFeet", 3956], ["listPrice", 2076955], ["bathroomsTotal", 10], ["bedroomsTotal", 1], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.326722"], ["updated_at", "2022-04-29 03:30:32.326722"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.5ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "144 Boyer Terrace, Lake Sasha, OH 44464"], ["lotSizeAcres", 15], ["lotSizeSquareFeet", 4243], ["listPrice", 3546597], ["bathroomsTotal", 4], ["bedroomsTotal", 1], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.335901"], ["updated_at", "2022-04-29 03:30:32.335901"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.2ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "283 Bryon Stream, Cassinburgh, AK 99377"], ["lotSizeAcres", 7], ["lotSizeSquareFeet", 2537], ["listPrice", 727961], ["bathroomsTotal", 2], ["bedroomsTotal", 5], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.341902"], ["updated_at", "2022-04-29 03:30:32.341902"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.5ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "Suite 684 9536 Daniel Oval, Hayesland, WI 09789"], ["lotSizeAcres", 4], ["lotSizeSquareFeet", 3475], ["listPrice", 435121], ["bathroomsTotal", 6], ["bedroomsTotal", 7], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.345516"], ["updated_at", "2022-04-29 03:30:32.345516"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.4ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "333 Kemmer Spurs, Spencerbury, IA 63486"], ["lotSizeAcres", 39], ["lotSizeSquareFeet", 2980], ["listPrice", 504075], ["bathroomsTotal", 3], ["bedroomsTotal", 14], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.349332"], ["updated_at", "2022-04-29 03:30:32.349332"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.5ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "2332 Bradtke Trail, East Marquettatown, ND 58349-8307"], ["lotSizeAcres", 6], ["lotSizeSquareFeet", 3695], ["listPrice", 4987449], ["bathroomsTotal", 1], ["bedroomsTotal", 15], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.353543"], ["updated_at", "2022-04-29 03:30:32.353543"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.3ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "Apt. 129 538 Londa Inlet, Port Osvaldotown, WV 10170"], ["lotSizeAcres", 37], ["lotSizeSquareFeet", 2216], ["listPrice", 4915265], ["bathroomsTotal", 5], ["bedroomsTotal", 2], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.358880"], ["updated_at", "2022-04-29 03:30:32.358880"]]
+  [1m[36mTRANSACTION (16.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.4ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "Apt. 736 994 Hettinger Forge, New Hallie, SD 27371"], ["lotSizeAcres", 29], ["lotSizeSquareFeet", 3621], ["listPrice", 2839412], ["bathroomsTotal", 3], ["bedroomsTotal", 14], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.379188"], ["updated_at", "2022-04-29 03:30:32.379188"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.5ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "Apt. 634 78248 Sumiko Forge, Port Cristal, NC 95535-4404"], ["lotSizeAcres", 13], ["lotSizeSquareFeet", 3726], ["listPrice", 1345189], ["bathroomsTotal", 6], ["bedroomsTotal", 14], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.384477"], ["updated_at", "2022-04-29 03:30:32.384477"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (0.5ms)[0m  [1m[32mINSERT INTO "houses" ("address", "lotSizeAcres", "lotSizeSquareFeet", "listPrice", "bathroomsTotal", "bedroomsTotal", "photo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "355 Schneider Field, South Cameliabury, NH 43893-3624"], ["lotSizeAcres", 29], ["lotSizeSquareFeet", 4395], ["listPrice", 872866], ["bathroomsTotal", 4], ["bedroomsTotal", 14], ["photo", "https://loremflickr.com/300/300"], ["created_at", "2022-04-29 03:30:32.388701"], ["updated_at", "2022-04-29 03:30:32.388701"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
