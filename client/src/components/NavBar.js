@@ -27,26 +27,25 @@ function NavBar({ user, setUser}) {
         });
     }
 
-    return (
-        <>
-
-        {/* <Nav> */}
-            {!user ? <Button as={Link} to="/login" exact>
-            Login
-            </Button> :
-            <Button variant="outline" onClick={handleLogoutClick}>
-            Logout
-            </Button>}
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <Button as={Link} to="/checkout" exact>Comida book </Button>
-        {/* </Nav> */}
-
-        </>
-    );
-    }
+  return (
+    <Wrapper>
+        <Link to="/" exact>Navbar</Link>
+      <Nav>
+      {!user ? 
+      <Button as={Link} to="/login" exact>Login</Button> 
+      :
+      (user && user.seller) ?
+        <Button variant="outline" onClick={handleLogoutClick}>
+        Logout
+        </Button>
+      </>
+      :  
+      <Button variant="outline" onClick={handleLogoutClick}>Logout</Button>
+      }
+    </Nav>
+  </Wrapper>
+  );
+}
 
     const Wrapper = styled.header`
     display: flex;
@@ -54,13 +53,5 @@ function NavBar({ user, setUser}) {
     align-items: center;
     padding: 8px;
     `;
-
-
-    // const Nav = styled.nav`
-    // display: flex;
-    // gap: 4px;
-    // position: absolute;
-    // right: 8px;
-    // `;
 
     export default NavBar;
