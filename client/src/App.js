@@ -58,9 +58,7 @@ import './App.css';
 function App() {
 
   const [user, setUser] = useState(null);
-
   const history = useHistory()
-
 
   useEffect(() => {
     // auto-login

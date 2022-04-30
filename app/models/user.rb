@@ -12,7 +12,7 @@ class User < ApplicationRecord
     has_many :browsers, through: :browsing_users, source: :browser
 
     validates :email, :password, :firstName, :lastName, presence: true
-    validates :email, :uniqueness: true
+    validates :email, uniqueness: true
     validates :email, confirmation: true
-    validates :password, length: {minimum: 10, maximum: 64}
+    validates :password, length: {minimum: 5, maximum: 30}
 end
