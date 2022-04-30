@@ -1132,3 +1132,169 @@ Started GET "/messages" for ::1 at 2022-04-29 23:36:40 -0400
   
 ActionController::RoutingError (uninitialized constant MessagesController):
   
+Started GET "/watchlists/1" for ::1 at 2022-04-29 23:42:43 -0400
+Processing by WatchlistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWatchlist Load (1.9ms)[0m  [1m[34mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/watchlists_controller.rb:39:in `find_watchlist'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 404 Not Found in 48ms (Views: 0.4ms | ActiveRecord: 30.3ms | Allocations: 5200)
+
+
+Started GET "/watchlists" for ::1 at 2022-04-29 23:42:51 -0400
+Processing by WatchlistsController#index as HTML
+  [1m[36mWatchlist Load (0.2ms)[0m  [1m[34mSELECT "watchlists".* FROM "watchlists"[0m
+  ↳ app/controllers/watchlists_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.25ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.2ms | Allocations: 2092)
+
+
+Started GET "/offers" for ::1 at 2022-04-29 23:42:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/offers"):
+  
+Started GET "/offers/1" for ::1 at 2022-04-29 23:43:48 -0400
+Processing by OffersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOffer Load (1.8ms)[0m  [1m[34mSELECT "offers".* FROM "offers" WHERE "offers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/offers_controller.rb:35:in `find_offer'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 404 Not Found in 8ms (Views: 0.5ms | ActiveRecord: 4.0ms | Allocations: 1522)
+
+
+Started GET "/users/1" for ::1 at 2022-04-29 23:44:23 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 1517)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:30:in `find_user'
+app/controllers/users_controller.rb:13:in `show'
+Started GET "/signup" for ::1 at 2022-04-29 23:45:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+Started GET "/login" for ::1 at 2022-04-29 23:45:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-04-29 23:46:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/users/babel/parser/lib/index.js" for 127.0.0.1 at 2022-04-29 23:46:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/babel/parser/lib/index.js"):
+  
+Started GET "/messages/babel/parser/lib/index.js" for 127.0.0.1 at 2022-04-29 23:46:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/messages/babel/parser/lib/index.js"):
+  
+Started GET "/houses/babel/parser/lib/index.js" for 127.0.0.1 at 2022-04-29 23:46:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/houses/babel/parser/lib/index.js"):
+  
+Started GET "/messages/1" for ::1 at 2022-04-29 23:46:50 -0400
+  
+ActionController::RoutingError (uninitialized constant MessagesController):
+  
+Started GET "/users/1" for ::1 at 2022-04-29 23:46:55 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1517)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:30:in `find_user'
+app/controllers/users_controller.rb:13:in `show'
+Started GET "/users" for ::1 at 2022-04-29 23:47:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started POST "/users/1" for ::1 at 2022-04-29 23:47:54 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/1"):
+  
+Started POST "/users/1" for ::1 at 2022-04-29 23:54:04 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/1"):
+  
+Started POST "/users" for ::1 at 2022-04-29 23:54:19 -0400
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+Started GET "/users/1" for ::1 at 2022-04-29 23:54:48 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (Allocations: 159)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:30:in `find_user'
+app/controllers/users_controller.rb:13:in `show'
+Started POST "/users" for ::1 at 2022-04-29 23:57:38 -0400
+Processing by UsersController#create as */*
+  Parameters: {"id"=>21, "firstName"=>"Chloe", "lastName"=>"Peng", "email"=>"123@gmail.com", "phoneNumber"=>"2022-04-26T14:47:37.075Z", "password"=>"[FILTERED]", "passsword_confirmation"=>"password", "user"=>{"id"=>21, "email"=>"123@gmail.com", "password"=>"[FILTERED]", "firstName"=>"Chloe", "lastName"=>"Peng", "phoneNumber"=>"2022-04-26T14:47:37.075Z"}}
+[31mUnpermitted parameters: :id, :passsword_confirmation, :user[0m
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (9.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 422 Unprocessable Entity in 494ms (Views: 0.5ms | ActiveRecord: 39.6ms | Allocations: 352798)
+
+
+Started POST "/users" for ::1 at 2022-04-29 23:58:12 -0400
+Processing by UsersController#create as */*
+  Parameters: {"id"=>21, "firstName"=>"Chloe", "lastName"=>"Peng", "email"=>"123@gmail.com", "phoneNumber"=>"2022-04-26T14:47:37.075Z", "password"=>"[FILTERED]", "passsword_confirmation"=>"password", "user"=>{"id"=>21, "email"=>"123@gmail.com", "password"=>"[FILTERED]", "firstName"=>"Chloe", "lastName"=>"Peng", "phoneNumber"=>"2022-04-26T14:47:37.075Z"}}
+[31mUnpermitted parameters: :id, :passsword_confirmation, :user[0m
+  [1m[36mTRANSACTION (15.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (48.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "firstName", "lastName", "phoneNumber", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "123@gmail.com"], ["password", "password"], ["firstName", "Chloe"], ["lastName", "Peng"], ["phoneNumber", "2022-04-26T14:47:37.075Z"], ["created_at", "2022-04-30 03:58:12.811369"], ["updated_at", "2022-04-30 03:58:12.811369"]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.22ms)
+Completed 200 OK in 108ms (Views: 1.0ms | ActiveRecord: 77.0ms | Allocations: 6407)
+
+
+Started GET "/users/1" for ::1 at 2022-04-29 23:58:55 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `find_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.2ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 879)
+
+

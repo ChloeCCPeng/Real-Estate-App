@@ -9,8 +9,8 @@
 // export default Home
 
 import React from "react";
-import NavBar from "./NavBar";
-import Grid from '@mui/material/Grid';
+// import NavBar from "./NavBar";
+// import Grid from '@mui/material/Grid';
 function Home({itemsToDisplay, onCategoryChange, selectedCategory, onGenderChange, selectedGender, setSelectedCauses, causes}) {
 
 
