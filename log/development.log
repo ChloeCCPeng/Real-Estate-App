@@ -734,3 +734,285 @@ SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/mode
 app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
 app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
 app/controllers/sessions_controller.rb:4:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-04-29 19:49:42 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 11ms (Allocations: 1518)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-04-29 19:49:44 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 3ms (Allocations: 160)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-04-29 19:51:26 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 9ms (Allocations: 1518)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-04-29 19:51:27 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (Allocations: 160)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-04-29 19:52:17 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 9ms (Allocations: 1518)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-04-29 19:55:00 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 9ms (Allocations: 1518)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-04-29 19:57:23 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 14ms (Allocations: 1518)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-04-29 19:58:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-04-29 19:58:24 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 10ms (Allocations: 1518)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-04-29 19:58:25 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 2ms (Allocations: 160)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-04-29 19:58:30 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (Allocations: 160)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-04-29 20:04:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-04-29 20:04:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-04-29 20:04:48 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 8ms (Allocations: 1518)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-04-29 20:05:27 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1", "password"=>"[FILTERED]", "session"=>{"username"=>"1", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 8ms (Allocations: 1518)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-04-29 20:15:05 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 20ms (Allocations: 1518)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-04-29 20:15:06 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (Allocations: 160)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-04-29 20:15:07 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 2ms (Allocations: 160)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-04-29 20:15:07 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (Allocations: 160)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-04-29 20:15:08 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (Allocations: 160)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-04-29 20:15:08 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (Allocations: 160)
+
+
+  
+SyntaxError (/Users/chloepeng/Development/Phase/Phase-5/Real-Estate-App/app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+... validates :email, :uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/sessions_controller.rb:4:in `create'
