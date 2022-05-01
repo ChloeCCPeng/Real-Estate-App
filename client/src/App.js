@@ -53,31 +53,47 @@ import React, { useEffect, useState } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 import Home from "./components/Home";
 import Login from "./components/Login";
+import Account from "./components/Account";
+import Listing from "./components/Listing";
+import HouseMarketReport from "./components/HouseMarketReport";
+import Search from "./components/Search";
 import './App.css';
 
 function App() {
 
-  const [user, setUser] = useState(null);
-  const history = useHistory()
+  // const [user, setUser] = useState(null);
+  // const history = useHistory()
 
-  useEffect(() => {
-    // auto-login
-    fetch("/me").then((r) => {
-      if (r.ok) {
-        r.json().then((user) => setUser(user));
-        history.push("/")
-      };
-    });
-  }, []);
+  // useEffect(() => {
+  //   // auto-login
+  //   fetch("/me").then((r) => {
+  //     if (r.ok) {
+  //       r.json().then((user) => setUser(user));
+  //       history.push("/")
+  //     };
+  //   });
+  // }, []);
 
   return (
     <>
       <Switch>
         <Route exact path="/">
-          <Home user={user} setUser={setUser}/> 
+          <Home /> 
         </Route>
         <Route exact path="/login">
           <Login onLogin={setUser} />
+        </Route>
+        <Route exact path="/account">
+          <Account /> 
+        </Route>
+        <Route exact path="/listing">
+          <Listing /> 
+        </Route>
+        <Route exact path="/houseMarketReport">
+          <HouseMarketReport /> 
+        </Route>
+        <Route exact path="/search">
+          <Search /> 
         </Route>
       </Switch>
     </>
