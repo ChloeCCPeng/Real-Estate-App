@@ -1,9 +1,18 @@
-import React from 'react'
+import * as React from 'react';
+import { Searchbar } from 'react-native-paper';
 
-function Search() {
+const MyComponent = () => {
+  const [searchQuery, setSearchQuery] = React.useState('');
+
+  const onChangeSearch = query => setSearchQuery(query);
+
   return (
-    <div>Search</div>
-  )
-}
+    <Searchbar
+      placeholder="Search"
+      onChangeText={onChangeSearch}
+      value={searchQuery}
+    />
+  );
+};
 
-export default Search
+export default MyComponent;
